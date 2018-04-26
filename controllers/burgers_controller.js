@@ -15,8 +15,10 @@ router.post("/api/burgers", function (req, res) {
   });
 });
 
-// router.put("/api/burgers", function(req, res) {
-//   burger.updateOne(["burger_name"], )
-// })
+router.put("/api/burgers", function(req, res) {
+  burger.updateOne(["devoured", true, "burger_name", req.body.name], function(result){
+    console.log("updated");
+  });
+});
 
 module.exports = router;
