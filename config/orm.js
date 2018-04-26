@@ -1,14 +1,26 @@
 var connection = require("./connection.js");
 
 var orm = {
-  selectAll: function(){
-    //stuff
+  selectAll: function (tableInput, callback) {
+    var query = "SELECT * FROM ??";
+    connection.query(query, [tableInput], function (err, res) {
+      if (err) throw err;
+      callback(res);
+    });
   },
-  insertOne: function() {
-    //more stuff
+  insertOne: function (tableInput, colToSearch, valOfCol, callback) {
+    var query = "INSERT INTO ?? (??) VALUES (?)";
+    connection.query(query, [tableInput, colToSearch, valOfCol], function (err, res) {
+      if (err) throw err;
+      callback(res);
+    });
   },
-  updateOne: function() {
-    //excessive stuff
+  updateOne: function (tableInput, colName, bool, colName, value, callback) {
+    var query = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
+    connection.query(query, [tableInput, colName, bool, colName, value], function (err, res) {
+      if (err) throw err;
+      callback(res);
+    })
   }
 }
 
