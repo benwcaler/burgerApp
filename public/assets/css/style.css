@@ -1,0 +1,54 @@
+body {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  align-items: center;
+  background-color: palegoldenrod;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-bottom: 100px;
+}
+
+ul {
+  text-align: left;
+}
+
+#item {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  font-size: 20px;
+}
+
+.devour {
+ font-size: 20px;
+}
+
+#devoured {
+  margin-left: 20px;
+  text-align: center;
+}
+
+#available {
+  margin-right: 20px;
+}
+
+h1 {
+  font-family: brewsky;
+  font-size: 80px;
+  color: lightcoral;
+}
+
+h2 {
+  font-family: brewsky;
+  font-size: 40px;
+  color: lightseagreen;
+}
+
+@font-face {
+  font-family: brewsky;
+  src: url(Brewsky.ttf);
+}
