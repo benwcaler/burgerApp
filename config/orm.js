@@ -14,10 +14,10 @@ var orm = {
       if (err) throw err;
       callback(res);
     });
-  },
-  updateOne: function (tableInput, colName, bool, colName, value, callback) {
+  },                       
+  updateOne: function (tableInput, col1Name, bool, col2Name, value, callback) {
     var query = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
-    connection.query(query, [tableInput, colName, bool, colName, value], function (err, res) {
+    connection.query(query, [tableInput, col1Name, bool, col2Name, value], function (err, res) {
       if (err) throw err;
       callback(res);
     })
