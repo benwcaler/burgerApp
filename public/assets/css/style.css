@@ -52,3 +52,21 @@ h2 {
   font-family: brewsky;
   src: url(Brewsky.ttf);
 }
+
+@media screen and (max-width: 700px) {
+  #body {
+    width: 95%;
+  }
+
+  #container {
+      grid-template-columns: 1fr;
+  }
+
+  #devoured {
+    margin-left: 0px;
+  }
+
+  #available {
+    margin-right: 0px;
+  }
+}
